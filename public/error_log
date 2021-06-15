@@ -1,0 +1,1 @@
+[11-Mar-2021 08:13:41 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Blog because the name is already in use in /home/sz9zu055ph1k/public_html/app/Http/Controllers/Blog.php on line 7

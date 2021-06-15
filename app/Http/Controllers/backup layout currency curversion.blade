@@ -1,0 +1,575 @@
+</div>
+	{{-- <div class="container">
+            <form action="{{ route('make_order') }}" method="post">
+                @csrf
+            <div class="row" style="margin-top: 20px;margin-bottom:20px;">
+                <div class="card col-md-12 col-sm-12 col-lg-12 rounded" style="border:1px solid orange;background-color: white">
+                    <center><div class="py-5">
+                        <h3 class="text-center ">Select Amount to Exchange</h3>
+                        <div class="card-body text-center">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    
+                                    <div class="input-group mb-3">
+                                        <input type="number" name="bitcoin_entered_amount"  id="bitcoin_value" class="form-control bitcoin_valuefConverion" min="1" value="1" style="background-color:#e9ecef">
+                                        <div class="input-group-append" >
+                                            <select  id="bitcoin_convert_to" class="cointType" name="bitcoin_convert_to" style="background-color:#e9ecef">
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-sm-1 ">
+                                    
+                                    <strong><i class="fas fa-equals"></i></strong>
+                                    <br>
+                                    <button type="button" class="btn-info btn-sm btn shadow-lg border-0 loadercovreter" style="display: none;"><i class="spinner-border text-warning "></i></button>
+                                    
+                                </div>
+                                <div class="col-sm-12">
+                                    
+                                    <p class="text-left">Currency you Need</p>
+                                    <div class="input-group mb-3">
+                                        <input type="number" name="bitcoin_converted_amount"  id="bitcoin_value" class="form-control bitcoin_converted_amount" readonly="">
+                                        <div class="input-group-append" >
+                                            <select  id="bitcoin_convert_to" class="currencyType" name="bitcoin_convert_to" style="background-color:#e9ecef">
+                                               <option value="USD">USD</option>
+                                               <option value="EUR">EUR</option>
+                                                <option value="ALL">ALL</option>
+                                                <option value="DZD">DZD</option>
+                                                <option value="ARS">ARS</option>
+                                                <option value="AMD">AMD</option>
+                                                <option value="AUD">AUD</option>
+                                                <option value="AZN">AZN</option>
+                                                <option value="BHD">BHD</option>
+                                                <option value="BDT">BDT</option>
+                                                <option value="BYN">BYN</option>
+                                                <option value="BMD">BMD</option>
+                                                <option value="BOB">BOB</option>
+                                                <option value="BAM">BAM</option>
+                                                <option value="BRL">BRL</option>
+                                                <option value="BGN">BGN</option>
+                                                <option value="KHR">KHR</option>
+                                                <option value="CAD">CAD</option>
+                                                <option value="CLP">CLP</option>
+                                                <option value="CNY">CNY</option>
+                                                <option value="COP">COP</option>
+                                                <option value="CRC">CRC</option>
+                                                <option value="HRK">HRK</option>
+                                                <option value="CUP">CUP</option>
+                                                <option value="CZK">CZK</option>
+                                                <option value="DKK">DKK</option>
+                                                <option value="PHP">PHP</option>
+                                                <option value="PLN">PLN</option>
+                                                <option value="GBP">GBP</option>
+                                                <option value="QAR">QAR</option>
+                                                <option value="RON">RON</option>
+                                                <option value="RUB">RUB</option>
+                                                <option value="SAR">SAR</option>
+                                                <option value="RSD">RSD</option>
+                                                <option value="SGD">SGD</option>
+                                                <option value="ZAR">ZAR</option>
+                                                <option value="KRW">KRW</option>
+                                                <option value="SSP">SSP</option>
+                                                <option value="VES">VES</option>
+                                                <option value="LKR">LKR</option>
+                                                <option value="SEK">SEK</option>
+                                                <option value="CHF">CHF</option>
+                                                <option value="THB">THB</option>
+                                                <option value="TTD">TTD</option>
+                                                <option value="TND">TND</option>
+                                                <option value="TRY">TRY</option>
+                                                <option value="UGX">UGX</option>
+                                                <option value="UAH">UAH</option>
+                                                <option value="AED">AED</option>
+                                                <option value="UYU">UYU</option>
+                                                <option value="UZS">UZS</option>
+                                                <option value="VND">VND</option>
+                                                <option value="DOP">DOP</option>
+                                                <option value="EGP">EGP</option>
+                                                <option value="GEL">GEL</option>
+                                                <option value="GHS">GHS</option>
+                                                <option value="GTQ">GTQ</option>
+                                                <option value="HNL">HNL</option>
+                                                <option value="HKD">HKD</option>
+                                                <option value="HUF">HUF</option>
+                                                <option value="ISK">ISK</option>
+                                                <option value="INR">INR</option>
+                                                <option value="IDR">IDR</option>
+                                                <option value="IRR">IRR</option>
+                                                <option value="IQD">IQD</option>
+                                                <option value="ILS">ILS</option>
+                                                <option value="JMD">JMD</option>
+                                                <option value="JPY">JPY</option>
+                                                <option value="JOD">JOD</option>
+                                                <option value="KZT">KZT</option>
+                                                <option value="KES">KES</option>
+                                                <option value="KWD">KWD</option>
+                                                <option value="KGS">KGS</option>
+                                                <option value="LBP">LBP</option>
+                                                <option value="MKD">MKD</option>
+                                                <option value="MYR">MYR</option>
+                                                <option value="MUR">MUR</option>
+                                                <option value="MXN">MXN</option>
+                                                <option value="MDL">MDL</option>
+                                                <option value="MNT">MNT</option>
+                                                <option value="MAD">MAD</option>
+                                                <option value="MMK">MMK</option>
+                                                <option value="NAD">NAD</option>
+                                                <option value="NPR">NPR</option>
+                                                <option value="TWD">TWD</option>
+                                                <option value="NZD">NZD</option>
+                                                <option value="NIO">NIO</option>
+                                                <option value="NGN">NGN</option>
+                                                <option value="NOK">NOK</option>
+                                                <option value="OMR">OMR</option>
+                                                <option value="PKR">PKR</option>
+                                                <option value="PAB">PAB</option>
+                                                <option value="PEN">PEN</option>
+                                                
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            <div class="mt-5" >
+                                
+                                
+                                
+                                <h3 class="pb-3 ">Select Method to be Get Paid</h3>
+                                <div class="row">
+                                    <div class="col-sm-5 mb-3">
+                                        <select id="bitcoin_value" class="paymentVal" name="paymentVal" style="width: 100%;background-color:#e9ecef">
+                                            <option value="paypal">Paypal</option>
+                                            <option value="bank_wire">Bank Wire</option>
+                                            <option value="westren_union">Western Union</option>
+                                            <option value="perfect_money">Perfect Money</option>
+                                            <option value="payza">Payza</option>
+                                            <option value="payoneer">Payoneer</option>
+                                            <option value="webmoney">Webmoney</option>
+                                            <option value="okpay">Okpay</option>
+                                            <option value="skrill">Skrill</option>
+                                            <option value="nettler">Nettler</option>
+                                            <option value="dash">Dash</option>
+                                            <option value="money_gram">Money Gram</option>
+                                            <option value="credit_card">Credit Card</option>
+                                            <option value="instaforex">Instaforex</option>
+                                            <option value="solid_trust_pay">Solid Trust Pay</option>
+                                            <option value="us_bank">US Bank</option>
+                                            <option value="advcash">AdvCash</option>
+                                            <option value="alipay_china">Alipay China</option>
+                                            <option value="paysafecard">Paysafecard</option>
+                                            <option value="onecard">OneCard</option>
+                                            <option value="sofort">SOFORT</option>
+                                            <option value="qivi_wallet">QIWI Wallet</option>
+                                            <option value="entromoney">Entromoney</option>
+                                            <option value="mobile_wallet">Mobile Wallet</option>
+                                            <option value="wordremit">Word Remit</option>
+                                            <option value="mobile_pay">Mobile Pay</option>
+                                            <option value="capital_one">Capital One</option>
+                                            <option value="apple_pay">Apple Pay</option>
+                                            <option value="chase_quick_pay">Chase Quick Pay</option>
+                                            <option value="transfer_wise">TransferWise</option>
+                                            <option value="venmo_mobile_payment">Venmo Mobile Payment</option>
+                                            <option value="xoom_money_transfer">Xoom Money Transfer</option>
+                                            <option value="swift_transfer">Swift Transfer</option>
+                                            <option value="direct_bank_deposit">Direct Bank Deposit</option>
+                                            <option value="buy_virtual_card">Buy Virtual Card</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        <input type="text" name="paypal_email" class="paypal" placeholder="e.g abc@gmail.com" id="account_id" style="width: 100% !important" >
+                                        <input type="text" name="bankwire_holder_name"  placeholder="A/c Holder Name" id="account_id" class="bank_wire" style="width: 100% !important">
+                                        <input type="text" name="westrenunion_full_name"  placeholder="Full Name" id="account_id" class="westren_union" style="width: 100% !important">
+                                        <input type="text" name="perfectmoney_pm_id"  placeholder="PM ID" id="account_id" class="perfect_money" style="width: 100% !important">
+                                        <input type="email" name="payza_payza_email"  placeholder="Payza Email" id="account_id" class="payza" style="width: 100% !important">
+                                        <input type="email" name="payoneer_payoneer_email"  placeholder="Payoneer Email" id="account_id" class="payoneer" style="width: 100% !important">
+                                        <input type="text" name="webmoney_webmoney_purse"  placeholder="Webmoney Purse" id="account_id" class="webmoney" style="width: 100% !important">
+                                        <input type="email" name="okpay_okpay_email"  placeholder="Okpay Email" id="account_id" class="okpay" style="width: 100% !important">
+                                        <input type="email" name="skrill_skrill_email"  placeholder="Skrill Email" id="account_id" class="skrill" style="width: 100% !important">
+
+                                        <input type="text" name="nettler_nettler_id"  placeholder="Nettler ID" id="account_id" class="nettler" style="width: 100% !important">
+
+                                        <input type="text" name="dash_dash_id"  placeholder="Dash ID" id="account_id" class="dash" style="width: 100% !important">
+
+                                        <input type="text" name="moneygram_full_name"  placeholder="Full Name" id="account_id" class="money_gram" style="width: 100% !important">
+
+                                        <input type="text" name="creditcard_card_number"  placeholder="Card Number" id="account_id" class="credit_card" style="width: 100% !important">
+
+                                        <input type="text" name="instaforex_instaforex_id"  placeholder="Instaforex ID" id="account_id" class="instaforex" style="width: 100% !important">
+
+                                        <input type="text" name="solidtrustpay_std_id"  placeholder="STD ID" id="account_id" class="solid_trust_pay" style="width: 100% !important">
+
+                                        <input type="text" name="usbank_us_id"  placeholder="US ID" id="account_id" class="us_bank" style="width: 100% !important">
+                                        
+                                        <input type="text" name="advcash_wallet_id"  placeholder="Wallet ID" id="account_id" class="advcash" style="width: 100% !important">
+
+                                        <input type="email" name="alipaychina_email_id"  placeholder="Email ID" id="account_id" class="alipay_china" style="width: 100% !important">
+
+                                        <input type="email" name="paysafecard_email_id"  placeholder="Email ID" id="account_id" class="paysafecard" style="width: 100% !important">
+
+                                        <input type="email" name="onecard_email_id"  placeholder="Email ID" id="account_id" class="onecard" style="width: 100% !important">
+
+                                        <input type="email" name="sofort_email_id"  placeholder="Email ID" id="account_id" class="sofort" style="width: 100% !important">
+
+                                        <input type="text" name="qiviwallet_id"  placeholder="ID" id="account_id" class="qivi_wallet" style="width: 100% !important">
+
+                                        <input type="text" name="wordremit_wallet_address"  placeholder="Wallet Address" id="account_id" class="wordremit" style="width: 100% !important">
+
+
+
+
+
+
+
+
+
+
+                                        <input type="text" name="mobilepay_full_name"  placeholder="Full Name" id="account_id" class="mobile_pay" style="width: 100% !important">
+
+                                        <input type="email" name="capitalone_email_id"  placeholder="Email ID" id="account_id" class="capital_one" style="width: 100% !important">
+
+                                        <input type="text" name="applepay_full_name"  placeholder="Full Name" id="account_id" class="apple_pay" style="width: 100% !important">
+
+                                        <input type="email" name="chasequickpay_email_id"  placeholder="Email ID" id="account_id" class="chase_quick_pay" style="width: 100% !important">
+
+                                        <input type="email" name="transferwise_email_address"  placeholder="Email Address" id="account_id" class="transfer_wise" style="width: 100% !important">
+
+                                        <input type="text" name="venmomobilepayment_full_name"  placeholder="Full Name" id="account_id" class="venmo_mobile_payment" style="width: 100% !important">
+
+                                        <input type="email" name="riamoneytransfer_email_address"  placeholder="Email Address" id="account_id" class="ria_money_transfer" style="width: 100% !important">
+
+                                        <input type="email" name="xoommoneytransfer_email_address"  placeholder="Email Address" id="account_id" class="xoom_money_transfer" style="width: 100% !important">
+
+                                        <input type="text" name="swifttransfer_holder_name"  placeholder="A/c Holder Name" id="account_id" class="swift_transfer" style="width: 100% !important">
+
+                                        <input type="text" name="directbankdeposit_holder_name"  placeholder="A/c Holder Name" id="account_id" class="direct_bank_deposit" style="width: 100% !important">
+
+                                        <input type="email" name="buyvirtualcard_email_address"  placeholder="Email Address" id="account_id" class="buy_virtual_card" style="width: 100% !important">
+
+                                        <input type="text" name="mobilewallet_full_name"  placeholder="Full Name" id="account_id" class="mobile_wallet" style="width: 100% !important">
+
+                                        <input type="email" name=""  placeholder="Wallet Address" id="account_id" class="payco" style="width: 100% !important">
+                                        
+                                        <input type="text" name="entromoney_wallet_address"  placeholder="Wallet Address" id="account_id" class="entromoney" style="width: 100% !important">
+
+                                        <input type="email" name="yandexmoney_email_address"  placeholder="Email Address" id="account_id" class="yandex_money" style="width: 100% !important">
+
+                                        <input type="email" name="googlepay_gmail_id"  placeholder="Gmail ID" id="account_id" class="google_pay" style="width: 100% !important">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                    
+                                </div>
+
+                                
+                                <div class="row bank_wire">
+                                    <div class="col-md-5 mb-3">
+                                        <input type="text" name="bankwire_swift_card"  placeholder="Swift Card" id="account_id" class="bank_wire" style="width: 100% !important">
+
+                                    </div>
+                                    
+                                    <div class="col-md-1">
+                                        
+                                    </div>
+                                    <div class="col-md-5 mb-2"> 
+                                        
+                                        <input type="text" name="bankwire_bank_name"  placeholder="Bank Name" id="account_id" class="bank_wire" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="row bank_wire">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="bankwire_iban"  placeholder="IBAN" id="account_id" class="bank_wire" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        <input type="text" name="bankwire_country"  placeholder="Country" id="account_id" class="bank_wire" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+
+
+                                <div class="row wordremit">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="wordremit_swift_card"  placeholder="Swift Card" id="account_id" class="wordremit" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5 mb-2">
+                                        
+                                        <input type="text" name="wordremit_bank_name"  placeholder="Bank Name" id="account_id" class="wordremit" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="row wordremit">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="wordremit_iban"  placeholder="IBAN" id="account_id" class="wordremit" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        <input type="text" name="wordremit_country"  placeholder="Country" id="account_id" class="wordremit" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                
+                                <div class="row westren_union">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="westrenunion_address"  placeholder="Address" id="account_id" class="westren_union" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5 mb-2">
+                                        
+                                        <input type="text" name="westrenunion_country"  placeholder="Country" id="account_id" class="westren_union" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="row westren_union">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="westrenunion_phone_no"  placeholder="Phone No" id="account_id" class="westren_union" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                
+                                <div class="row money_gram">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="moneygram_address"  placeholder="Address" id="account_id" class="money_gram" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5 mb-2">
+                                        
+                                        <input type="text" name="moneygram_country"  placeholder="Country" id="account_id" class="money_gram" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="row money_gram">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="moneygram_phone_no"  placeholder="Phone No" id="account_id" class="money_gram" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                
+                                <div class="row credit_card">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="creditcard_expiry"  placeholder="Expiry m/y" id="account_id" class="credit_card" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5 mb-2">
+                                        
+                                        <input type="text" name="creditcard_cvv"  placeholder="CVV" id="account_id" class="credit_card" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+
+                                <div class="row us_bank">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="usbank_expiry"  placeholder="Expiry m/y" id="account_id" class="us_bank" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5 mb-2">
+                                        
+                                        <input type="text" name="usbank_cvv"  placeholder="CVV" id="account_id" class="us_bank" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+
+                              
+                                <div class="row mobile_wallet">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="mobilewallet_phone_number"  placeholder="Phone Number" id="account_id" class="mobile_wallet" style="width: 100% !important">
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                                
+                                <div class="row mobile_pay">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="mobilepay_phone_number"  placeholder="Phone Number" id="account_id" class="mobile_pay" style="width: 100% !important">
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                                <div class="row apple_pay">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="applepay_phone_number"  placeholder="Phone Number" id="account_id" class="apple_pay" style="width: 100% !important">
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                                
+                                <div class="row venmo_mobile_payment">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="venmomobilepayment_phone_number"  placeholder="Phone Number" id="account_id" class="venmo_mobile_payment" style="width: 100% !important">
+                                    </div>
+                                    
+                                </div>
+                                
+
+                                
+                                <div class="row swift_transfer">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="swifttransfer_swift_transfer"  placeholder="Swift Code" id="account_id" class="swift_transfer" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        <input type="text" name="swifttransfer_bank_name"  placeholder="Bank Name" id="account_id" class="swift_transfer" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="row swift_transfer">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="swifttransfer_iban"  placeholder="IBAN" id="account_id" class="swift_transfer" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        <input type="text" name="swifttransfer_country"  placeholder="Country" id="account_id" class="swift_transfer" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                
+                                
+                                <div class="row direct_bank_deposit">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="directbankdeposit_swift_code"  placeholder="Swift Code" id="account_id" class="swift_transfer" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5 mb-2">
+                                        
+                                        <input type="text" name="directbankdeposit_bank_name"  placeholder="Bank Name" id="account_id" class="direct_bank_deposit" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="row direct_bank_deposit">
+                                    <div class="col-sm-5 mb-3">
+                                        <input type="text" name="directbankdeposit_iban"  placeholder="IBAN" id="account_id" class="direct_bank_deposit" style="width: 100% !important">
+                                    </div>
+                                    
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        
+                                        <input type="text" name="directbankdeposit_country"  placeholder="Country" id="account_id" class="direct_bank_deposit" style="width: 100% !important">
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="row ">
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary mb-5" style="width:250px;background-color: orange;border:1px solid orange;height: 60px">Order Now</button>
+                </div>
+            </div>
+                    </center>
+
+                </div>
+
+            </div>
+            
+           
+        </form>
+        </div> --}}
